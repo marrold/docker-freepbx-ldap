@@ -40,10 +40,10 @@ An example `docker-compose.yml` file can be found below.
           - PUID=5001
           - PGID=5001
           - TZ=Europe/London
-          - FREEPBX_SQLSERVER="10.8.1.8:3306"
-          - FREEPBX_SQLUSER="admin"
-          - FREEPBX_SQLPASS="password"
-          - FREEPBX_SQLDB="freepbx"
+          - FREEPBX_SQLSERVER=10.8.1.8:3306
+          - FREEPBX_SQLUSER=admin
+          - FREEPBX_SQLPASS=password
+          - FREEPBX_SQLDB=freepbx
         ports:
           - 10389:10389/tcp
         restart: unless-stopped
