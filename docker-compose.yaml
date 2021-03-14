@@ -1,0 +1,18 @@
+---
+version: "3.2"
+services:
+  freepbx-ldap:
+    #image: index.docker.io/marrold/marrold-ircddbgateway:latest
+    image: docker-freepbx-ldap
+    container_name: freepbx-ldap
+    environment:
+      - PUID=5001
+      - PGID=5001
+      - TZ=Europe/London
+      - FREEPBX_SQLSERVER="10.8.1.8:3306"
+      - FREEPBX_SQLUSER="admin"
+      - FREEPBX_SQLPASS="pass"
+      - FREEPBX_SQLDB="freepbx"
+    ports:
+      - 10389:10389/tcp
+    restart: unless-stopped
