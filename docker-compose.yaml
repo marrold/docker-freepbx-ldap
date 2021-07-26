@@ -2,8 +2,7 @@
 version: "3.2"
 services:
   freepbx-ldap:
-    #image: index.docker.io/marrold/marrold-ircddbgateway:latest
-    image: docker-freepbx-ldap
+    image: index.docker.io/marrold/docker-freepbx-ldap:latest
     container_name: freepbx-ldap
     environment:
       - PUID=5001
